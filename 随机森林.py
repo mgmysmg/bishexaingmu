@@ -32,7 +32,7 @@ n_test = len(test)
 labeled_texts = []
 texts = list(train['text']) + list(val['text']) + list(test['text']) + list(ming['text']) + list(sanguo['text']) + list(simaqian['text'])  + list(songshi['text'])
 ndims = 100
-model = Word2Vec(sentences=texts, vector_size=ndims, window=5, workers=5,sg=1)
+model = Word2Vec(sentences=texts, vector_size=ndims, window=5, workers=5, sg=1)
 vecs = np.zeros([n_total, ndims])
 for i, sentence in enumerate(texts[:n_total]):
     counts, row = 0, 0
